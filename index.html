@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="alimentação saudável, W3C, academia">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header> 
+        <img src="fitzone.png" alt="Logo">
+        <div class="links">
+            <a href="#proposito">Home</a>
+            <a href="#imc">IMC</a>
+            <a href="#form">Contato</a>
+        </div>
+        <div>
+            <a href="login.html" class="header_button">Login</a>
+        </div>
+    </header>
+    
+    <main>
+        <section id="proposito">
+            <h2>Qual é o nosso propósito?</h2>
+            <p> 
+                No <b>FitZone</b>, acreditamos que adotar um estilo de vida saudável não precisa ser caro ou complicado. Por isso, oferecemos um guia prático e gratuito com treinos em casa, 
+                dicas de alimentação equilibrada e orientações para melhorar o bem-estar de forma simples e eficaz 
+                sem necessidade de academia, personal trainer ou dietas mirabolantes. Somos o ponto de partida ideal para quem busca criar hábitos saudáveis e sustentáveis.
+            </p>
+            <br>
+            <p>
+                <b>Nossa missão</b> é oferecer uma base sólida de conhecimento para que você tenha mais disposição, fortaleça a mente, previna doenças e melhore sua qualidade de vida.
+                Porque acreditamos que pequenas mudanças diárias podem gerar grandes transformações e estamos aqui para te guiar nessa jornada.
+            </p>
+        </section>
+        
+        <section id="imc">
+            <h3>Apenas uma demonstração de IMC (Índice de Massa Corporal)</h3>
+            <table border="1">
+                <caption>IMC</caption>
+                <thead>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Abaixo do Peso</td>
+                        <td>Menor que 18,5</td>
+                    </tr>
+                    <tr>
+                        <td>Peso Normal</td>
+                        <td>18,5 - 24,9</td>
+                    </tr>
+                    <tr>
+                        <td>Sobrepeso</td>
+                        <td>25,0 - 29,9</td>
+                    </tr>
+                    <tr>
+                        <td>Obesidade Grau I</td>
+                        <td>30,0 - 34,9</td>
+                    </tr>
+                    <tr>
+                        <td>Obesidade Grau II</td>
+                        <td>35,0 - 39,9</td>
+                    </tr>
+                    <tr>
+                        <td>Obesidade Grau III</td>
+                        <td>Acima de 40</td>
+                    </tr>
+                </tbody>
+            </table>    
+        </section>   
+        
+        <section id="form">
+            <form action="contato.php" method="POST" onsubmit="return validarFormulario();">
+                <h3>Possui alguma dúvida ou sugestão? Nos envie agora mesmo uma mensagem:</h3>
+                
+                <label for="nome">Nome completo:</label><br>
+                <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Digite o seu email" required><br><br>
+                
+                <label>Você já tentou seguir uma rotina saudável?:</label><br>
+                <input type="radio" id="sim" name="rotina" value="sim">
+                <label for="sim">Sim</label>
+                <input type="radio" id="nao" name="rotina" value="nao">
+                <label for="nao">Não</label><br><br>
+                
+                <label>O que mais impactaria na sua rotina saudável?:</label><br>
+                <input type="checkbox" id="dinheiro" name="impacto[]" value="dinheiro">
+                <label for="dinheiro">Dinheiro</label><br>
+                <input type="checkbox" id="tempo" name="impacto[]" value="tempo">
+                <label for="tempo">Tempo</label><br>
+                <input type="checkbox" id="consistencia" name="impacto[]" value="consistencia">
+                <label for="consistencia">Consistência</label><br><br>
+
+                <label for="objetivo">Qual seu objetivo principal?</label><br>
+                <select id="objetivo" name="objetivo" required>
+                    <option value="">Selecione</option>
+                    <option value="perder_peso">Perder Peso</option>
+                    <option value="ganhar_musculo">Ganhar Massa Muscular</option>
+                    <option value="melhorar_saude">Melhorar Saúde</option>
+                </select><br><br>
+
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="4" cols="50" placeholder="Digite sua mensagem aqui..." required></textarea><br><br>
+                
+                <div class="botoes_frm">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <footer align="center" id="footer">
+        <p>&copy; 2025 FitZone - Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="js/validaForm.js"></script>
+    <script src="js/validarFormNovo.js"></script>
+</body>
+</html>

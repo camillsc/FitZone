@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ececdd;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #2D7E3B;
+    padding: 0 30px;
+    height: 10vh;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 110px;
+    height: auto;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+a.header_button {
+    background-color: #2D7E3B;
+    font-size: 24px;
+    padding: 10px 15px;
+    color: #c6f6d5;
+    border-radius: 7px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block; 
+}
+
+a.header_button:hover {
+    background-color: #256e32;
+}
+
+main {
+    flex: 1;
+    margin-top: 10vh; 
+    padding-bottom: 10vh; 
+}
+
+#form_restrict {
+    padding: 40px;
+    background-color: #f6f8ee;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px grey;
+    width: 400px;
+    max-width: 90%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#form_restrict h2 {
+    margin-bottom: 30px;
+    color: #2D7E3B;
+    font-size: 24px;
+}
+
+.botoes_frm {
+    margin: 15px 0;
+}
+
+.botoes_frm button.botoes_restrict {
+    background-color: #2D7E3B;
+    font-size: 16px;
+    padding: 15px;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    width: 200px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botoes_frm button.botoes_restrict:hover {
+    background-color: #256e32;
+}
+
+footer {
+    background-color: #2D7E3B;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+}

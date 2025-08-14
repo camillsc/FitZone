@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ececdd;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;  
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background-color: #2D7E3B;
+    padding: 0 30px;
+    height: 10vh;
+    width: 100%;
+    z-index: 10;
+}
+
+header img {
+    width: 110px;
+    height: auto;
+    display: block;
+}
+
+.button-container {
+    margin-left: auto;
+}
+
+a.header_button {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    margin: 10px;
+    background-color: #2D7E3B;
+    font-size: 24px;
+    padding: 10px 15px;
+    color: #c6f6d5;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+a.header_button:hover {
+    background-color: #256e32;
+}
+
+footer {
+    background-color: #2D7E3B;
+    width: 100%;
+    height: 10vh; 
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;     
+    gap: 30px;               
+    padding: 40px 20px;
+}
+
+.dados-card {
+    width: 60vw; 
+    max-width: 600px;
+    padding: 40px;
+    background-color: #f6f8ee;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px grey;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dados-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(45, 126, 59, 0.4);
+}
+
+.dados-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2D7E3B;
+    text-align: center;
+}
+
+.linha-dado {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.linha-dado:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-weight: bold;
+    color: #2D7E3B;
+    width: 40%;
+}
+
+.linha-dado span {
+    width: 60%;
+    color: #333;
+}
