@@ -1,0 +1,167 @@
+/* ========== Reset / Base ========== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root{
+  --verde:#2D7E3B;
+  --verde-esc:#256e32;
+  --bg:#ececdd;
+  --card:#f6f8ee;
+  --borda:#bfc5b8;
+  --texto:#222;
+  --erro:#b00020;
+  --ok:#1f8f4e;
+}
+
+html, body { height: 100%; }
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--texto);
+}
+
+/* ========== Header (igual ao site) ========== */
+header{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: var(--verde);
+  padding: 0 30px;
+  height: 10vh;
+  width: 100%;
+  z-index: 10;
+}
+header img{ width:110px; height:auto; display:block; }
+
+.button-container{ display:flex; justify-content:flex-end; width:100%; }
+a.header_button{
+  display:flex; align-items:center;
+  margin:10px;
+  background-color: var(--verde);
+  font-size: 24px;
+  padding:10px 15px;
+  color:#c6f6d5;
+  border-radius:7px;
+  font-weight:bold;
+  text-decoration:none;
+  cursor:pointer;
+  transition: background-color .3s ease;
+}
+a.header_button:hover{ background-color: var(--verde-esc); }
+
+/* ========== Main/Layout ========== */
+main{
+  flex: 1;
+  padding-top: 100px;   /* compensa header fixo */
+  display: flex;
+  justify-content: center;
+}
+
+/* Card do formulário de cadastro */
+#form_cadastro {
+  padding: 40px;
+  background-color: var(--card);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  width: 400px;
+  max-width: 90%;
+  box-sizing: border-box;
+  position: absolute;   /* centralização absoluta */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Título */
+#form_cadastro h3 {
+  padding: 16px 0 8px;
+  text-align: center;
+  color: var(--verde);
+  font-size: 24px;
+}
+
+/* Organização interna do form */
+#form_cadastro form {
+  display: grid;
+  gap: 8px;
+}
+
+#form_cadastro label {
+  display: block;
+  margin: 2px 0 4px 2px;
+  font-weight: 600;
+  color: #2a2a2a;
+}
+
+/* Campos */
+#form_cadastro input[type="email"],
+#form_cadastro input[type="password"] {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid var(--borda);
+  border-radius: 7px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+#form_cadastro input:focus {
+  outline: none;
+  border-color: var(--verde);
+  box-shadow: 0 0 0 3px rgba(45,126,59,.15);
+}
+
+/* Botão */
+.botoes_frm {
+  text-align: center;
+  margin-top: 6px;
+}
+.botoes_frm button {
+  margin: 0 10px;
+  background-color: var(--verde);
+  font-size: 16px;
+  padding: 15px;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  width: 100%;
+  max-width: 220px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.botoes_frm button:hover { background-color: var(--verde-esc); }
+
+/* Link auxiliar */
+.link-aux {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--verde);
+  text-decoration: none;
+}
+.link-aux:hover { text-decoration: underline; }
+
+/* Mensagem */
+#mensagem {
+  margin-top: 6px;
+  text-align: center;
+  color: var(--erro);
+  min-height: 18px;
+  font-weight: 600;
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: var(--verde);
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  justify-content: center;
+  margin-top: auto;
+}

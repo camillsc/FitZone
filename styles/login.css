@@ -1,9 +1,5 @@
 /* ========== Reset / Base ========== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -24,19 +20,9 @@ header {
   width: 100%;
   z-index: 10;
 }
+header img { width: 110px; height: auto; display: block; }
 
-header img {
-  width: 110px;
-  height: auto;
-  display: block;
-}
-
-.button-container {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
+.button-container { display: flex; justify-content: flex-end; width: 100%; }
 a.header_button {
   display: flex;
   align-items: center;
@@ -51,15 +37,12 @@ a.header_button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
-a.header_button:hover {
-  background-color: #256e32;
-}
+a.header_button:hover { background-color: #256e32; }
 
 /* ========== Main/Layout ========== */
 main {
   flex: 1;
-  padding-top: 100px;      /* compensa header fixo */
+  padding-top: 100px;  /* compensa header fixo */
   display: flex;
   justify-content: center;
 }
@@ -90,7 +73,7 @@ h3 {
 /* Organização interna do form */
 #form_login form {
   display: grid;
-  gap: 1px;              /* espaçamento uniforme entre itens */
+  gap: 8px;   /* mesmo do cadastro */
 }
 
 #form_login label {
@@ -101,32 +84,26 @@ h3 {
 }
 
 /* Campos */
-input[type="email"],
-input[type="password"] {
+#form_login input[type="email"],
+#form_login input[type="password"] {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 3px;     /* espaço menor; o gap do grid já organiza */
+  padding: 12px 10px;          /* mesmo do cadastro */
   border: 1px solid #bfc5b8;
-  border-radius: 5px;
+  border-radius: 7px;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   background: #fff;
   transition: border-color .2s, box-shadow .2s;
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus {
+#form_login input:focus {
   outline: none;
   border-color: #2D7E3B;
   box-shadow: 0 0 0 3px rgba(45,126,59,.15);
 }
 
 /* Botões */
-.botoes_frm {
-  text-align: center;
-  margin-top: 6px;
-}
-
+.botoes_frm { text-align: center; margin-top: 6px; }
 .botoes_frm button {
   margin: 0 10px;
   background-color: #2D7E3B;
@@ -140,12 +117,9 @@ input[type="password"]:focus {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.botoes_frm button:hover { background-color: #256e32; }
 
-.botoes_frm button:hover {
-  background-color: #256e32;
-}
-
-/* Link "Não tem um usuário? Cadastre-se" (sem alterar HTML) */
+/* Link "Não tem um usuário? Cadastre-se" */
 #form_login > a {
   display: block;
   text-align: center;
@@ -154,12 +128,9 @@ input[type="password"]:focus {
   color: #2D7E3B;
   text-decoration: none;
 }
+#form_login > a:hover { text-decoration: underline; }
 
-#form_login > a:hover {
-  text-decoration: underline;
-}
-
-/* Mensagens de erro (se usar) */
+/* Mensagens de erro */
 #error-message {
   margin-top: 6px;
   text-align: center;
@@ -177,4 +148,41 @@ footer {
   color: #ffffff;
   justify-content: center;
   margin-top: auto;
+}
+/* --- Deixa o login com o MESMO espaçamento do cadastro --- */
+
+/* 1) Some com os <br> do HTML (sem editar o HTML) */
+#form_login br { display: none; }
+
+/* 2) Usa grid com gap igual ao cadastro */
+#form_login form {
+  display: grid;
+  gap: 8px;
+}
+
+/* 3) Ajusta label e campos como no cadastro */
+#form_login label {
+  margin: 2px 0 4px 2px;
+  font-weight: 600;
+  color: #2a2a2a;
+}
+
+#form_login input[type="email"],
+#form_login input[type="password"] {
+  padding: 12px 10px;            /* igual cadastro */
+  margin-bottom: 0;               /* gap já cuida do espaço */
+  border: 1px solid #bfc5b8;
+  border-radius: 7px;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+#form_login input:focus {
+  outline: none;
+  border-color: #2D7E3B;
+  box-shadow: 0 0 0 3px rgba(45,126,59,.15);
+}
+
+/* 4) Título com mesma “respiração” */
+#form_login h3 {
+  padding: 16px 0 8px;
 }
